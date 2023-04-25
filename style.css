@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+
+:root {
+    --primary-background: rgb(32, 23, 31);
+    --footer-background: rgb(19, 12, 18);
+    --primary-color: rgb(255, 225, 170);
+    --font-main: 'Capriola', sans-serif;
+
+}
+
+a {
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2rem;
+    grid-template-columns: 1fr;
+}
+
+#main {
+    grid-row: 1/2;
+    background-color: var(--primary-background);
+    font-family: var(--font-main);
+    color: var(--primary-color);
+}
+
+.footer {
+    grid-template-rows: 2/3;
+    background-color: var(--footer-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-main);
+    color:rgba(255, 225, 170, 30%);
+    font-size: 0.8rem;
+}
+
+a {
+    width: 0;
+}
+
+.footer a img, a {
+    height: 90%;
+    margin: 0 0.5rem;
+}
