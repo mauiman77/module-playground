@@ -18,7 +18,7 @@ function blurred(element) {
 }
 
 function checkExistance() {
-
+	return main.querySelector('.activate > button');
 }
 
 function makeMobile() {
@@ -26,7 +26,10 @@ function makeMobile() {
 }
 
 function createButtons() {
-  blurred(main);
+	if (checkExistance()) {
+		buttonMain.innerHTML = '';
+		return
+	}
   for (count = 0; count < 6; count += 1) {
     const buttonOption = document.createElement('button');
     buttonOption.classList.add('mobile', 'option');
