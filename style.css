@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 :root {
-    --primary-background: rgb(32, 23, 31);
-    --footer-background: rgb(19, 12, 18);
-    --primary-color: rgb(255, 225, 170);
-    --font-main: 'Capriola', sans-serif;
-
+    --primary-background: rgb(243, 243, 243);
+    --footer-background: rgb(0, 0, 0);
+    --primary-color: black;
+    --light-color: rgb(107, 114, 128);
+    --font-main: 'Inter', c;
+    --font-color-lighter: rgba(0, 0, 0, 0.85);
+    --active-color: rgb(92, 206, 88);
 }
 
 a {
@@ -24,6 +26,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 2rem;
     grid-template-columns: 1fr;
+    background-color: black;
 }
 
 #main {
@@ -31,6 +34,11 @@ body {
     background-color: var(--primary-background);
     font-family: var(--font-main);
     color: var(--primary-color);
+    border: 6px black solid;
+    border-radius: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .footer {
@@ -40,8 +48,8 @@ body {
     align-items: center;
     justify-content: center;
     font-family: var(--font-main);
-    color:rgba(255, 225, 170, 30%);
     font-size: 0.8rem;
+    color: rgb(184, 184, 184);
 }
 
 a {
@@ -51,4 +59,114 @@ a {
 .footer a img, a {
     height: 90%;
     margin: 0 0.5rem;
+}
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+}
+
+.dropdown-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown-bar {
+    height: 2rem;
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    margin-bottom: 5px;
+    user-select: none;
+    transition: 0.05s;
+    color: var(--font-color-lighter);
+}
+
+.dropdown-bar:hover {
+    background-color: rgb(230, 253, 230);
+}
+
+.dropdown {
+    background-color: white;
+    box-sizing: border-box;
+    height: 3rem;
+    width: calc(60% * 0.3);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    visibility: hidden;
+    position: absolute;
+    max-width: 10rem;
+    margin-top: 3rem;
+    transition: transform 50s ease, top 1s ease;
+    transform: translateY(0.5rem);
+}
+
+.item {
+    height: 2rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 2px 0px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:hover {
+    transition: 0.1s;
+    box-shadow: 0px 0px 5px 0px rgb(187, 27, 75);
+}
+
+.visible {
+    visibility: visible;
+}
+
+.shadow {
+    box-shadow: 0px 5px 5px 1px rgb(212, 212, 212);
+}
+
+.active, .dropdown-bar:hover.active {
+    transition: 0.3s;
+    background-color: var(--active-color);
+    color: rgba(0, 0, 0)
+}
+
+/* PHONE */
+
+button.mobile {
+    height: 50px;
+    width: 50px;
+    border-radius: 44rem;
+    position: absolute;
+    font-size: 30px;
+}
+
+button.mobile.activate {
+    background-color: grey;
+    border: 3% solid white;
+    bottom: 5%;
+    right: 20px;
+    color: rgb(44, 44, 44);
+}
+
+button.mobile.option {
+    background-color: rgb(170, 27, 27);
+    border: 3% solid white;
+    bottom: 5%;
+    right: 20px;
+    margin: 0 2.5rem 60px 0;
+    color: rgb(26, 16, 16);
 }
