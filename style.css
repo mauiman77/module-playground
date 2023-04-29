@@ -2,7 +2,7 @@
 
 :root {
     --primary-background: rgb(243, 243, 243);
-    --primary-background-mobile: 
+    --primary-background-mobile;
     --footer-background: rgb(0, 0, 0);
     --primary-color: black;
     --light-color: rgb(107, 114, 128);
@@ -189,3 +189,34 @@ button.mobile.option {
     background-image: url('img/pexels-ann-h-1762851.jpg');
     background-size: cover;
 }
+
+#slider {
+	background-color: white;
+	box-shadow: 0px 0px 3px 3px grey;
+	height: 90%;
+	width: 90%;
+	border-radius: 1.2rem;
+	z-index: 0;
+}
+
+#slider-cover {
+	background: none;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+button.left, button.right {
+		background-color: rgba(0, 0, 0, 10%);
+		height: 3rem;
+		width: 4rem;
+		border-radius: 5px;
+		font-size: 2rem;
+		color: #aaa;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 20px;
+	}
