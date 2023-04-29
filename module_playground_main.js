@@ -5,17 +5,37 @@ buttonMain.textContent = 'O';
 main.appendChild(buttonMain);
 
 let count;
-let incrementMargin = 0;
-let addCurve = 1.05;
+const curveAdd = 1;
+const marginStart = 60;
+const marginRightAdd = 10;
 
-for (count = 0; count < 7; count += 1) {
-  incrementMargin += 30;
-  console.log(incrementMargin);
-  const buttonOption = document.createElement('button');
-  buttonOption.classList.add('mobile', 'option');
-  buttonOption.textContent = '!';
-  buttonOption.style.marginRight = `${incrementMargin * addCurve}px`;
-  buttonOption.style.marginBottom = `${incrementMargin * 1.8}px`;
-  addCurve *= 1.1;
-  main.appendChild(buttonOption);
+function giveMobileButtonColour(number) {
+  return `var(--mobile-button-${number})`;
 }
+
+function blurred(element) {
+  return element.classList.toggle('blurred');
+}
+
+function checkExistance() {
+
+}
+
+function makeMobile() {
+  main.classList.add('mobile');
+}
+
+function createButtons() {
+  blurred(main);
+  for (count = 0; count < 6; count += 1) {
+    const buttonOption = document.createElement('button');
+    buttonOption.classList.add('mobile', 'option');
+    buttonOption.textContent = '!';
+    buttonOption.style.marginBottom = `${(count * 60) + marginStart}px`;
+    buttonOption.style.backgroundColor = giveMobileButtonColour(count + 1);
+    buttonMain.appendChild(buttonOption);
+  }
+}
+
+buttonMain.addEventListener('click', createButtons);
+makeMobile();

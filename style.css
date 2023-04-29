@@ -2,12 +2,22 @@
 
 :root {
     --primary-background: rgb(243, 243, 243);
+    --primary-background-mobile: 
     --footer-background: rgb(0, 0, 0);
     --primary-color: black;
     --light-color: rgb(107, 114, 128);
     --font-main: 'Inter', c;
+   
     --font-color-lighter: rgba(0, 0, 0, 0.85);
     --active-color: rgb(92, 206, 88);
+
+    --mobile-button-1: rgb(61, 197, 56);
+    --mobile-button-2: rgb(56, 164, 197);
+    --mobile-button-3: rgb(110, 56, 197);
+    --mobile-button-4: rgb(197, 152, 56);
+    --mobile-button-5: rgb(197, 56, 138);
+    --mobile-button-6: rgb(197, 195, 56);
+
 }
 
 a {
@@ -152,21 +162,30 @@ button.mobile {
     border-radius: 44rem;
     position: absolute;
     font-size: 30px;
+    border: 2px solid rgba(0, 0, 0, 40%);
+
 }
 
 button.mobile.activate {
     background-color: grey;
-    border: 3% solid white;
     bottom: 5%;
     right: 20px;
     color: rgb(44, 44, 44);
 }
 
 button.mobile.option {
-    background-color: rgb(170, 27, 27);
     border: 3% solid white;
     bottom: 5%;
     right: 20px;
-    margin: 0 2.5rem 60px 0;
     color: rgb(26, 16, 16);
+}
+
+#main.blurred::before {
+    filter: blur(5px);
+    transition: 0.1s;
+}
+
+#main.mobile {
+    background-image: url('img/pexels-ann-h-1762851.jpg');
+    background-size: cover;
 }
