@@ -38,3 +38,19 @@ function autoSlide() {
 }
 
 autoSlide();
+
+let timeout;
+let time = 1
+
+function myFunc(toAdd) {
+  timeout = setTimeout(myAlert, 5000 * toAdd);
+}
+
+function myAlert() {
+  console.log('Hello');
+}
+
+for (let t = 0; t < 10; t += 1) {
+  myFunc(time);
+  time += 1;
+}
