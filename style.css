@@ -190,6 +190,8 @@ button.mobile.option {
     background-size: cover;
 }
 
+/* SLIDER */
+
 #slider {
 	background-color: white;
 	box-shadow: 0px 0px 3px 3px grey;
@@ -197,6 +199,7 @@ button.mobile.option {
 	width: 90%;
 	border-radius: 1.2rem;
 	z-index: 0;
+	transition: 0.3s;
 }
 
 #slider-cover {
@@ -214,9 +217,15 @@ button.left, button.right {
 		width: 4rem;
 		border-radius: 5px;
 		font-size: 2rem;
-		color: #aaa;
+		color: rgba(255, 255, 255, 33%);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin: 0 20px;
 	}
+	
+	button.left:hover, button.right:hover {
+		color: rgba(255, 255, 255, 80%);
+		background-color: rgba(255, 255, 255, 10%);
+		transition: 5.2s:
+}
